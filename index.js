@@ -6,8 +6,7 @@ const morgan = require("morgan");
 const app = express();
 
 // Configuration
-const PORT = 3000;
-const HOST = "localhost";
+const port = process.env.PORT || 3001;
 const API_SERVICE_URL = "http://icnbackup.intercares.nl:5100/v1/alarm/send";
 
 // Logging
@@ -27,8 +26,8 @@ app.use('/api', createProxyMiddleware({
  }));
 
  // Start the Proxy
-app.listen(PORT, HOST, () => {
-    console.log(`Starting Proxy at ${HOST}:${PORT}`);
+app.listen(port, () => {
+    console.log(`Starting Proxy at ${port}`);
  });
 
  module.exports = app;
