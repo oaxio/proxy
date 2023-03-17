@@ -21,7 +21,7 @@ app.use('/api', createProxyMiddleware({
     },
     onProxyReq(proxyReq, req) {
         proxyReq.setHeader('Content-Type', 'application/json-patch+json')
-        proxyReq.setHeader('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQkgtMDAwMSIsInVzZXJuYW1lIjoiQkgtMDAwMSIsInBob25lbm8iOiJCSC0wMDAxIiwic3RhZmZpZCI6IjM3YzgyZDYwLThiM2ItNDE5Ni1iYThhLTZjNWU1ZGE1ZjNlNyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InVzZXIiLCJleHAiOjE2Nzg4ODMyNjAsImlzcyI6ImFjY2Vzc1Rva2VuIn0.ud7TVVBYI5LzMfAi-GvECNjJ-MzBKilfj4dP0sT3xS0')
+        proxyReq.setHeader('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQkgwMDAxIiwidXNlcm5hbWUiOiJCSDAwMDEiLCJwaG9uZW5vIjoiQkgwMDAxIiwic3RhZmZpZCI6ImRkMGYxMzliLWNiMzYtNDRhMC04MzkxLTM0ZWVmYWNmMjhhZSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InVzZXIiLCJleHAiOjE2NzkyMjk3OTYsImlzcyI6ImFjY2Vzc1Rva2VuIn0.yOhVr3yWBFgqTlOwjbw6JChWhWRCTXtf7h1R1_eZmJM')
         proxyReq.write("{\"phoneNo\":\"BH-0001\",\"alarmType\":1,\"locationType\":0,\"location\":\"string\",\"w9Id\":\"string\",\"w9AlarmReason\":0,\"w9AlarmLegacy\":\"string\",\"w9AlarmDetails\":\"string\",\"w9Position\":\"string\"}")
         console.log("HOI")
         console.log(req.body)
